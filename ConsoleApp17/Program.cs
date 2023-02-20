@@ -33,6 +33,11 @@ while (true)
             Console.WriteLine(ayditoria.Name22);
             Console.WriteLine(ayditoria.Name23);
             break;
+        case "Specialnost":
+            var specialnost = CreateSpecialnost();// 3 вариант - дисциплина
+            Console.WriteLine(specialnost.Name61);
+            Console.WriteLine(specialnost.Name62);
+            break;
         default:
             Console.WriteLine("Такого класса не существует");
             break;
@@ -78,4 +83,14 @@ static VidZanyatiya CreateVidZanyatiya()
     var name141 = new VidZanyatiya(Console.ReadLine() ?? "Нет названия");
     return name141;
 
+}
+
+static Specialnost CreateSpecialnost()
+{
+    Console.WriteLine("Введите название специальности: ");
+    var name61 = (Console.ReadLine() ?? "Нет названия");
+    Console.WriteLine("Введите сокращение специальности: ");
+    var name62 = (Console.ReadLine() ?? "Нет сокращения");
+    var a = new Specialnost(name61, name62);
+    return a;
 }
