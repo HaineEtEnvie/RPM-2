@@ -88,9 +88,9 @@ static VidZanyatiya CreateVidZanyatiya()
 static Specialnost CreateSpecialnost()
 {
     Console.WriteLine("Введите название специальности: ");
-    var name61 = (Console.ReadLine() ?? "Нет названия");
+    var name = (Console.ReadLine() ?? "Нет названия");
     Console.WriteLine("Введите сокращение специальности: ");
-    var name62 = (Console.ReadLine() ?? "Нет сокращения");
+    var reduction = (Console.ReadLine() ?? "Нет сокращения");
     var a = new Specialnost(name61, name62);
     return a;
 }
