@@ -7,14 +7,14 @@ namespace ClassLibrary1
 {
     public class Specialnost
     {
-        private readonly string name61;
-        public string Name61 { get => name61; }
-        private readonly string name62;
-        public string Name62 { get => name62; }
-        public Specialnost(string name61, string name62)
+        private readonly string name;
+        public string Name6{ get => name; }
+        private readonly string reduction;
+        public string Reduction { get => reduction; }
+        public Specialnost(string name, string reduction)
         {
-            this.name61 = name61;
-            this.name62 = name62;
+            this.name = name;
+            this.Reduction = reduction;
         }
     }
 }
