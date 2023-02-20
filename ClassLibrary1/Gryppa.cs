@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    internal class Gryppa
+    public class Gryppa
     {
     }
 }
