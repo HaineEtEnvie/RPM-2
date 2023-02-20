@@ -185,7 +185,7 @@ static VidZanyatiya CreateVidZanyatiya() // 14 вариант - вид заня�
 
 }
 
-static Gryppa CreateVidZanyatiyaGryppa() // 15
+static Gryppa CreateGryppa() // 15
 {
     throw new NotImplementedException();
 }
