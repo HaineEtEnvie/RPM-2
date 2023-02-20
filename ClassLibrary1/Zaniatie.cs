@@ -2,20 +2,20 @@
 {
     public class Zaniatie
     {
-        private readonly Ayditoria name2; // 2 вариант - аудитория
-        public Ayditoria Name2 { get => name2; }// 2 вариант - аудитория
+        private readonly Ayditoria ayditoria; // 2 вариант - аудитория
+        public Ayditoria Ayditoria { get => ayditoria; }// 2 вариант - аудитория
 
-        private readonly Discyplina name3;// 3 вариант - дисциплина
-        public Discyplina Name3 { get => name3; }// 3 вариант - дисциплина
+        private readonly Discyplina discyplina;// 3 вариант - дисциплина
+        public Discyplina Discyplina { get => discyplina; }// 3 вариант - дисциплина
 
-        private readonly VidZanyatiya name14;// 14 вариант - вид занятия
-        public VidZanyatiya Name14 { get => name14; }// 14 вариант - вид занятия
+        private readonly VidZanyatiya vidZanyatiya;// 14 вариант - вид занятия
+        public VidZanyatiya VidZanyatiya { get => vidZanyatiya; }// 14 вариант - вид занятия
 
-        public Zaniatie(Ayditoria name2,Discyplina name3, VidZanyatiya name14)
+        public Zaniatie(Ayditoria ayditoria,Discyplina discyplina, VidZanyatiya vidZanyatiya)
         {
-            this.name2 = name2;
-            this.name3 = name3;
-            this.name14 = name14;
+            this.ayditoria = ayditoria;
+            this.discyplina = discyplina;
+            this.vidZanyatiya = vidZanyatiya;
         }
     }
 }
