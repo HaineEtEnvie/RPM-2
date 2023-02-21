@@ -11,18 +11,18 @@ while (true)
 
         case "Zaniatie": 
             var zaniatie = CreateZaniatie(); // 1 вариант - занятие
-            Console.WriteLine($"\nПолученные данные:\n{zaniatie.Name2.Name21}"); // 2 вариант - аудитория
-            Console.WriteLine(zaniatie.Name2.Name22);// 2 вариант - аудитория
-            Console.WriteLine(zaniatie.Name2.Name23);// 2 вариант - аудитория
+            Console.WriteLine($"\nПолученные данные:\n{zaniatie.Name2.Nazvanie}"); // 2 вариант - аудитория
+            Console.WriteLine(zaniatie.Name2.PosadMest);// 2 вариант - аудитория
+            Console.WriteLine(zaniatie.Name2.Okna);// 2 вариант - аудитория
             Console.WriteLine(zaniatie.Name3.Name1);// 3 вариант - дисциплина
             Console.WriteLine(zaniatie.Name3.Shortname);// 3 вариант - дисциплина
             Console.WriteLine(zaniatie.Name14.Name141);// 14 вариант - вид занятия
             break;
         case "Ayditoria":
             var ayditoria = CreateAyditoria();// 2 вариант - аудитория
-            Console.WriteLine(ayditoria.Name21);
-            Console.WriteLine(ayditoria.Name22);
-            Console.WriteLine(ayditoria.Name23);
+            Console.WriteLine(ayditoria.Nazvanie);
+            Console.WriteLine(ayditoria.PosadMest);
+            Console.WriteLine(ayditoria.Okna);
             break;
         case "Dyscyplina":
             var dyscyplina = CreateDiscyplina();// 3 вариант - дисциплина
@@ -105,17 +105,16 @@ static Zaniatie CreateZaniatie()
     var a = new Zaniatie(name2, name3, name14);
     return a;
 }
-static Ayditoria CreateAyditoria() // 2 вариант - аудитория
+static Ayditoria CreateAyditoria()
 {
     Console.Write("Введите название аудитории: ");
-    var name21 = Console.ReadLine() ?? "Нет названия";
-    // ссылка на сотрудника
+    var nazvanie = Console.ReadLine() ?? "Нет названия";
+    // ссылка на сотрудника 
     Console.Write("Введите кол-во посадочных мест: ");
-    var name22 = Console.ReadLine() ?? "Нет названия";
+    int posadmest = Convert.ToInt32(Console.ReadLine() ?? "Нет названия");
     Console.Write("Введите кол-во окон: ");
-    var name23 = Console.ReadLine() ?? "Нет названия";
-    var a = new Ayditoria(name21, name22, name23);
-    return a;
+    int okna = Convert.ToInt32(Console.ReadLine() ?? "Нет названия");
+    return new Ayditoria(nazvanie, posadmest, okna);
 }
 
 static Discyplina CreateDiscyplina() // 3 вариант - дисциплина
@@ -185,7 +184,7 @@ static VidZanyatiya CreateVidZanyatiya() // 14 вариант - вид заня�
 
 }
 
-static Gryppa CreateGryppa() // 15
+static Gryppa Oborudovanie() // 15
 {
     throw new NotImplementedException();
 }
