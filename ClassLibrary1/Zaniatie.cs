@@ -2,19 +2,31 @@
 {
     public class Zaniatie
     {
-        private readonly Ayditoria ayditoria; // 2 вариант - аудитория
-        public Ayditoria Ayditoria { get => ayditoria; }// 2 вариант - аудитория
+        private readonly Discyplina discyplina;
+        public Discyplina Discyplina { get => discyplina; }
 
-        private readonly Discyplina discyplina;// 3 вариант - дисциплина
-        public Discyplina Discyplina { get => discyplina; }// 3 вариант - дисциплина
+        private readonly Sotrydnik sotrydnik;
+        public Sotrydnik Sotrydnik { get => sotrydnik; }
 
-        private readonly VidZanyatiya vidZanyatiya;// 14 вариант - вид занятия
-        public VidZanyatiya VidZanyatiya { get => vidZanyatiya; }// 14 вариант - вид занятия
+        private readonly Ayditoria ayditoria;
+        public Ayditoria Ayditoria { get => ayditoria; }
 
-        public Zaniatie(Ayditoria ayditoria,Discyplina discyplina, VidZanyatiya vidZanyatiya)
+        private readonly Gryppa gryppa;
+        public Gryppa Gryppa { get => gryppa; }
+
+        private readonly Para para;
+        public Para Para { get => para; }
+
+        private readonly VidZanyatiya vidZanyatiya;
+        public VidZanyatiya VidZanyatiya { get => vidZanyatiya; }
+
+        public Zaniatie(Discyplina discyplina, Sotrydnik sotrydnik,Ayditoria ayditoria, Gryppa gryppa,  Para para, VidZanyatiya vidZanyatiya)
         {
-            this.ayditoria = ayditoria;
             this.discyplina = discyplina;
+            this.sotrydnik = sotrydnik;
+            this.ayditoria = ayditoria;
+            this.gryppa = gryppa;
+            this.para = para;
             this.vidZanyatiya = vidZanyatiya;
         }
     }

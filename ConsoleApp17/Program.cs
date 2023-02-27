@@ -13,7 +13,7 @@ class Program
             {
 
                 case "Zaniatie":
-                    Printeri.Print(CreateZaniatie()); // 1 вариант - занятие
+                    Printeri.Print(CreateZaniatie());
                     break;
                 case "Ayditoria":
                     Printeri.Print(CreateAyditoria());
@@ -37,8 +37,7 @@ class Program
                     // 8 вариант
                     break;
                 case "Sotrydnik":
-                    var sotrydnik = CreateSotrydnik(); // 9 вариант сотрудник
-                    Console.WriteLine("ФИО: {0}, {1}, {2}", sotrydnik.Surname, sotrydnik.Name, sotrydnik.Otchestvo);
+                    Printeri.Print(CreateSotrydnik());
                     break;
                 case "Doljnost":
                     // 10 вариант
@@ -137,7 +136,6 @@ class Program
     }
 
 
-
     static Gryppa CreateGryppa() // 4
     {
         Console.Write("Введите название группы: ");
@@ -155,7 +153,6 @@ class Program
     }
 
 
-
     static Student CreateStudent() // 5
     {
         Console.Write("Введите имя студента: ");
@@ -171,18 +168,17 @@ class Program
     }
 
 
-
     static Specialnost CreateSpecialnost() // 6
     {
         throw new NotImplementedException();
     }
 
 
-
     static Para CreatePara() // 7
     {
         throw new NotImplementedException();
     }
+
 
     static Smena CreateSmena() // 8
     {

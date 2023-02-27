@@ -10,8 +10,11 @@ internal static class Printeri
     public static void Print(Zaniatie zaniatie) // 1
     {
         Console.WriteLine($"\nПолученные данные: ");
-        Print(zaniatie.Ayditoria);
         Print(zaniatie.Discyplina);
+        Print(zaniatie.Sotrydnik);
+        Print(zaniatie.Ayditoria);
+        Print(zaniatie.Gryppa);
+        Print(zaniatie.Para);
         Print(zaniatie.VidZanyatiya);
     }
     public static void Print(Ayditoria ayditoria) // 2
@@ -25,7 +28,7 @@ internal static class Printeri
         Console.WriteLine(discyplina.Name);
         Console.WriteLine(discyplina.Shortname);
     }
-    public static void Print(Gryppa gryppa)
+    public static void Print(Gryppa gryppa) // 4
     {
         Console.WriteLine(gryppa.Name);
         Console.WriteLine(gryppa.Shortname);
@@ -33,21 +36,6 @@ internal static class Printeri
         Console.WriteLine(gryppa.Year);
         Print(gryppa.Specialnost);
         Print(gryppa.Sotrydnik);
-
-    }
-
-    public static void Print(Sotrydnik sotrydnik) // 9
-    {
-        throw new NotImplementedException();
-    }
-
-    public static void Print(VidZanyatiya vidZanyatiya) // 14
-    {
-        Console.WriteLine(vidZanyatiya.Name);
-    }
-    public static void Print(Specialnost specialnost) // 6
-    {
-        throw new NotImplementedException();
     }
     public static void Print(Student student) // 5
     {
@@ -57,5 +45,81 @@ internal static class Printeri
         Print(student.Gryppa);
         Console.WriteLine(student.Data);
     }
+    public static void Print(Specialnost specialnost) // 6
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Para para) // 7
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Smena smena) // 8
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Sotrydnik sotrydnik) // 9
+    {
+        Console.WriteLine(sotrydnik.Surname);
+        Console.WriteLine(sotrydnik.Name);
+        Console.WriteLine(sotrydnik.Otchestvo);
+    }
+    public static void Print(Doljnost doljnost) // 10
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Podrazdelenie podrazdelenie) // 11
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Organizacia organizacia) // 12
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Korpus korpus) // 13
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(VidZanyatiya vidZanyatiya) // 14
+    {
+        Console.WriteLine(vidZanyatiya.Name);
+    }
+    public static void Print(Oborudovanie oborudovanie) // 15
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(KTP kTP) // 16
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Tema tema) // 17
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Paragraf paragraf) // 18
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Tema_VidZanyatiya tema_VidZanyatiya) // 19
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Material material) // 20
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Kompetenciya kompetenciya) // 21
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(ShapkaKTP shapkaKTP) // 22
+    {
+        throw new NotImplementedException();
+    }
+    public static void Print(Vneurochka vneurochka) // 23
+    {
+        throw new NotImplementedException();
+    }
+
+
 }
 
