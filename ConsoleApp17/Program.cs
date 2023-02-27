@@ -33,7 +33,13 @@ class Program
                     Console.WriteLine(discyplina.Shortname);
                     break;
                 case "Gryppa":
-                    // 4 вариант
+                    var gryppa = CreateGryppa(); // 4 вариант - группа
+                    Console.WriteLine(gryppa.Name);
+                    Console.WriteLine(gryppa.Shortname);
+                    Console.WriteLine(gryppa.Chislo);
+                    Console.WriteLine(gryppa.Year);
+                    //Console.WriteLine(gryppa.Specialnost);
+                    //Console.WriteLine(gryppa.Sotrydnik);
                     break;
                 case "Student":
                     // 5 вариант
@@ -142,7 +148,18 @@ class Program
     }
     static Gryppa CreateGryppa() // 4
     {
-        throw new NotImplementedException();
+        Console.Write("Введите название группы: ");
+        var name = Console.ReadLine() ?? "Нет названия";
+        Console.Write("Введите сокращение: ");
+        var shortname = Console.ReadLine() ?? "Нет названия";
+        Console.Write("Введите численность: ");
+        var chislo = Console.ReadLine() ?? "Нет названия";
+        Console.Write("Введите год поступления:");
+        var year = Console.ReadLine() ?? "Нет названия";
+        // ссылка на специальность//
+        //ссылка на сотрудника//
+        var a = new Gryppa(name, shortname, chislo, year);
+        return a;
     }
 
     static Student CreateStudent() // 5
