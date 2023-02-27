@@ -69,7 +69,12 @@ class Program
                     // 10 вариант
                     break;
                 case "Podrazdelenie":
-                    // 11 вариант
+                    var podrazdelenie = CreatePodrazdelenie();// 11 вариант - подразделение
+                    Console.WriteLine(podrazdelenie.Nazvanie);
+                    Console.WriteLine(podrazdelenie.Sotrydnik.Surname);
+                    Console.WriteLine(podrazdelenie.Sotrydnik.Name);
+                    Console.WriteLine(podrazdelenie.Sotrydnik.Otchestvo);
+
                     break;
                 case "Organizacia":
                     // 12 вариант
@@ -219,7 +224,10 @@ class Program
 
     static Podrazdelenie CreatePodrazdelenie() // 11
     {
-        throw new NotImplementedException();
+        Console.Write("Введите название: ");
+        var nazvanie = Console.ReadLine() ?? "Нет названия";
+        var a = new Podrazdelenie(nazvanie, CreateSotrydnik(), CreateOrganizacia());
+        return a;
     }
 
     static Organizacia CreateOrganizacia() // 12
