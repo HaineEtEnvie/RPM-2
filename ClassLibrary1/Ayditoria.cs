@@ -8,18 +8,18 @@ namespace ClassLibrary1
 {
     public class Ayditoria
     {
-        private readonly string name21;
-        public string Name21 { get => name21; }
+        private readonly string nazvanie;
+        public string Nazvanie { get => nazvanie; }
 
-        private readonly string name22;
-        public string Name22 { get => name22; }
-        private readonly string name23;
-        public string Name23 { get => name23; }
-        public Ayditoria(string name21, string name22, string name23)
+        private readonly string posadmesta;
+        public string Posadmesta { get => posadmesta; }
+        private readonly string kolvookon;
+        public string Kolvookon { get => kolvookon; }
+        public Ayditoria(string nazvanie, string posadmesta, string kolvookon)
         {
-            this.name21 = name21;
-            this.name22 = name22;
-            this.name23 = name23;
+            this.nazvanie = nazvanie;
+            this.posadmesta = posadmesta;
+            this.kolvookon = kolvookon;
         }
     }
 }
