@@ -9,7 +9,7 @@ namespace ClassLibrary1
     public class Discyplina
     {
         private readonly string name1;
-        public string Name1 { get => name1; }
+        public string Name { get => name1; }
 
         private readonly string shortname;
         public string Shortname { get => shortname; }

@@ -23,7 +23,7 @@ class Program
                     break;
                 case "Discyplina":
                     var discyplina = CreateDiscyplina();// 3 вариант - дисциплина
-                    Console.WriteLine(discyplina.Name1);
+                    Console.WriteLine(discyplina.Name);
                     Console.WriteLine(discyplina.Shortname);
                     break;
                 case "Gryppa":
@@ -73,7 +73,7 @@ class Program
                     break;
                 case "VidZanyatiya":
                     var vidzanyatiya = CreateVidZanyatiya();// 14 вариант - дисциплина
-                    Console.WriteLine(vidzanyatiya.Name141);
+                    Console.WriteLine(vidzanyatiya.Name);
                     break;
                 case "Oborudovanie":
                     // 15 вариант
@@ -257,8 +257,8 @@ class Program
     static VidZanyatiya CreateVidZanyatiya() // 14 вариант - вид занятия
     {
         Console.Write("Введите вид занятия: ");
-        var name141 = new VidZanyatiya(Console.ReadLine() ?? "Нет названия");
-        return name141;
+        var name = new VidZanyatiya(Console.ReadLine() ?? "Нет названия");
+        return name;
 
     }
 
