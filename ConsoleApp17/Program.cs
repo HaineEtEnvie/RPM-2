@@ -13,13 +13,7 @@ class Program
             {
 
                 case "Zaniatie":
-                    var zaniatie = CreateZaniatie(); // 1 вариант - занятие
-                    Console.WriteLine($"\nПолученные данные:\n{zaniatie.Ayditoria.Nazvanie}"); // 2 вариант - аудитория
-                    Console.WriteLine(zaniatie.Ayditoria.Posadmesta);// 2 вариант - аудитория
-                    Console.WriteLine(zaniatie.Ayditoria.Kolvookon);// 2 вариант - аудитория
-                    Console.WriteLine(zaniatie.Discyplina.Name1);// 3 вариант - дисциплина
-                    Console.WriteLine(zaniatie.Discyplina.Shortname);// 3 вариант - дисциплина
-                    Console.WriteLine(zaniatie.VidZanyatiya.Name141);// 14 вариант - вид занятия
+                    Print(CreateZaniatie()); // 1 вариант - занятие
                     break;
                 case "Ayditoria":
                     var ayditoria = CreateAyditoria();// 2 вариант - аудитория
@@ -115,6 +109,30 @@ class Program
             }
         }
 
+    }
+
+    static void Print(Zaniatie zaniatie)
+    {
+        Console.WriteLine($"\nПолученные данные:\n{zaniatie.Ayditoria.Nazvanie}"); // 2 вариант - аудитория
+        Print(zaniatie.Ayditoria);
+        Print(zaniatie.Discyplina);
+        Print(zaniatie.VidZanyatiya);
+    }
+
+    static void Print(VidZanyatiya vidZanyatiya)
+    {
+        throw new NotImplementedException();
+    }
+
+    static void Print(Discyplina discyplina)
+    {
+        throw new NotImplementedException();
+    }
+
+    static void Print(Ayditoria ayditoria)
+    {
+        Console.WriteLine(ayditoria.Posadmesta);// 2 вариант - аудитория
+        Console.WriteLine(ayditoria.Kolvookon);// 2 вариант - аудитория
     }
 
     static Zaniatie CreateZaniatie()
