@@ -19,7 +19,9 @@ internal static class Printeri
     }
     public static void Print(Ayditoria ayditoria) // 2
     {
-        Console.WriteLine(ayditoria.Nazvanie); 
+        Console.WriteLine(ayditoria.Nazvanie);
+        Print(ayditoria.Sotrydnik);
+        Print(ayditoria.Oborudovanie);
         Console.WriteLine(ayditoria.Posadmesta);
         Console.WriteLine(ayditoria.Kolvookon);
     }

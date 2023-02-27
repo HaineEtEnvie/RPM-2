@@ -118,7 +118,7 @@ class Program
         var posadmesta = Console.ReadLine() ?? "Нет названия";
         Console.Write("Введите кол-во окон: ");
         var kolvookon = Console.ReadLine() ?? "Нет названия";
-        var a = new Ayditoria(nazvanie, posadmesta, kolvookon);
+        var a = new Ayditoria(nazvanie, CreateSotrydnik(), posadmesta, kolvookon, CreateOborudovanie());
         return a;
     }
 
