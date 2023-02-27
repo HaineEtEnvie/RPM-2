@@ -42,10 +42,18 @@ class Program
                     //Console.WriteLine(gryppa.Sotrydnik);
                     break;
                 case "Student":
-                    // 5 вариант
+                    var student = CreateStudent(); // 5 вариант - студент
+                    Console.WriteLine(student.Name);
+                    Console.WriteLine(student.Familia);
+                    Console.WriteLine(student.Otchestvo);
+                    Console.WriteLine(student.Gryppa.Name);
+                    Console.WriteLine(student.Gryppa.Shortname);
+                    Console.WriteLine(student.Gryppa.Chislo);
+                    Console.WriteLine(student.Gryppa.Year);
+                    Console.WriteLine(student.Data);
                     break;
                 case "Specialnost":
-                    var specialnost = CreateSpecialnost();// 3 вариант - дисциплина
+                    var specialnost = CreateSpecialnost();
                     Console.WriteLine(specialnost.Name);
                     Console.WriteLine(specialnost.Reduction);
                     break;
@@ -167,7 +175,16 @@ class Program
 
     static Student CreateStudent() // 5
     {
-        throw new NotImplementedException();
+        Console.Write("Введите имя студента: ");
+        var name = (Console.ReadLine() ?? "Нет названия");
+        Console.Write("Введите фамилию студента: ");
+        var familia = (Console.ReadLine() ?? "Нет названия");
+        Console.Write("Введите отчество студента: ");
+        var otchestvo = (Console.ReadLine() ?? "Нет названия");
+        Console.Write("Введите дату рождения студента: ");
+        var data = Convert.ToDateTime(Console.ReadLine() ?? "Нет названия");
+        var a = new Student(name, familia, otchestvo, CreateGryppa(), data);
+        return a;
     }
 
     static Specialnost CreateSpecialnost() // 6
