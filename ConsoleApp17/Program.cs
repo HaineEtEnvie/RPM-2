@@ -96,8 +96,11 @@ class Program
     static Zaniatie CreateZaniatie()
     {
         return new Zaniatie(
-            CreateAyditoria(),
             CreateDiscyplina(),
+            CreateSotrydnik(),
+            CreateAyditoria(),
+            CreateGryppa(),
+            CreatePara(),
             CreateVidZanyatiya());
     }
 
