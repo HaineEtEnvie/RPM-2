@@ -54,7 +54,8 @@ class Program
                     // 8 вариант
                     break;
                 case "Sotrydnik":
-                    // 9 вариант
+                    var sotrydnik = CreateSotrydnik(); // 9 вариант сотрудник
+                    Console.WriteLine("ФИО: {0}, {1}, {2}", sotrydnik.Surname, sotrydnik.Name, sotrydnik.Otchestvo);
                     break;
                 case "Doljnost":
                     // 10 вариант
@@ -184,7 +185,14 @@ class Program
 
     static Sotrydnik CreateSotrydnik() // 9
     {
-        throw new NotImplementedException();
+        Console.Write("Введите фамилию: ");
+        var surname = Console.ReadLine() ?? "Нет названия";
+        Console.Write("Введите имя: ");
+        var name = Console.ReadLine() ?? "Нет названия";
+        Console.Write("Введите отчество: ");
+        var otchestvo = Console.ReadLine() ?? "Нет названия";
+        var a = new Sotrydnik(surname, name, otchestvo);
+        return a;
     }
 
     static Doljnost CreateDoljnost() // 10
