@@ -53,7 +53,9 @@ class Program
                     Console.WriteLine(student.Data);
                     break;
                 case "Specialnost":
-                    // 6 вариант
+                    var specialnost = CreateSpecialnost();
+                    Console.WriteLine(specialnost.Name);
+                    Console.WriteLine(specialnost.Reduction);
                     break;
                 case "Para":
                     // 7 вариант
@@ -187,7 +189,12 @@ class Program
 
     static Specialnost CreateSpecialnost() // 6
     {
-        throw new NotImplementedException();
+        Console.WriteLine("Введите название специальности: ");
+        var Name = (Console.ReadLine() ?? "Нет названия");
+        Console.WriteLine("Введите сокращение специальности: ");
+        var reduction = (Console.ReadLine() ?? "Нет сокращения");
+        var a = new Specialnost(Name,reduction);
+        return a;
     }
 
     static Para CreatePara() // 7
