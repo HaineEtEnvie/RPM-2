@@ -19,10 +19,10 @@ namespace ClassLibrary1
         private readonly Gryppa gryppa;
         public Gryppa Gryppa { get => gryppa; }
 
-        public int Data { get => data; }
-        private readonly int data;
+        public DateTime Data { get => data; }
+        private readonly DateTime data;
 
-        public Student(string name, string familia, string otchestvo, Gryppa gryppa, int data)
+        public Student(string name, string familia, string otchestvo, Gryppa gryppa, DateTime data)
         {
             this.name = name;
             this.familia = familia;
