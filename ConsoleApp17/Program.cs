@@ -180,7 +180,7 @@ class Program
         Console.Write("Введите отчество студента: ");
         var otchestvo = (Console.ReadLine() ?? "Нет названия");
         Console.Write("Введите дату рождения студента: ");
-        int data = Convert.ToInt32(Console.ReadLine() ?? "Нет названия");
+        var data = Convert.ToDateTime(Console.ReadLine() ?? "Нет названия");
         var a = new Student(name, familia, otchestvo, CreateGryppa(), data);
         return a;
     }
