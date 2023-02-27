@@ -8,17 +8,16 @@ namespace ClassLibrary1
 {
     public class Discyplina
     {
-        private readonly string name1;
-        public string Name { get => name1; }
+        private readonly string name;
+        public string Name { get => name; }
 
         private readonly string shortname;
         public string Shortname { get => shortname; }
 
-        public Discyplina(string name1, string shortname)
+        public Discyplina(string name, string shortname)
         {
-            this.name1 = name1;
+            this.name = name;
             this.shortname = shortname;
-
         }
     }
 }

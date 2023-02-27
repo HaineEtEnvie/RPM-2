@@ -13,38 +13,19 @@ class Program
             {
 
                 case "Zaniatie":
-                    Print(CreateZaniatie()); // 1 вариант - занятие
+                    Printeri.Print(CreateZaniatie()); // 1 вариант - занятие
                     break;
                 case "Ayditoria":
-                    var ayditoria = CreateAyditoria();// 2 вариант - аудитория
-                    Console.WriteLine(ayditoria.Nazvanie);
-                    Console.WriteLine(ayditoria.Posadmesta);
-                    Console.WriteLine(ayditoria.Kolvookon);
+                    Printeri.Print(CreateAyditoria());
                     break;
                 case "Discyplina":
-                    var discyplina = CreateDiscyplina();// 3 вариант - дисциплина
-                    Console.WriteLine(discyplina.Name);
-                    Console.WriteLine(discyplina.Shortname);
+                    Printeri.Print(CreateDiscyplina());
                     break;
                 case "Gryppa":
-                    var gryppa = CreateGryppa(); // 4 вариант - группа
-                    Console.WriteLine(gryppa.Name);
-                    Console.WriteLine(gryppa.Shortname);
-                    Console.WriteLine(gryppa.Chislo);
-                    Console.WriteLine(gryppa.Year);
-                    //Console.WriteLine(gryppa.Specialnost);
-                    //Console.WriteLine(gryppa.Sotrydnik);
+                    Printeri.Print(CreateGryppa());
                     break;
                 case "Student":
-                    var student = CreateStudent(); // 5 вариант - студент
-                    Console.WriteLine(student.Name);
-                    Console.WriteLine(student.Familia);
-                    Console.WriteLine(student.Otchestvo);
-                    Console.WriteLine(student.Gryppa.Name);
-                    Console.WriteLine(student.Gryppa.Shortname);
-                    Console.WriteLine(student.Gryppa.Chislo);
-                    Console.WriteLine(student.Gryppa.Year);
-                    Console.WriteLine(student.Data);
+                    Printeri.Print(CreateStudent());
                     break;
                 case "Specialnost":
                     // 6 вариант
@@ -72,8 +53,7 @@ class Program
                     // 13 вариант
                     break;
                 case "VidZanyatiya":
-                    var vidzanyatiya = CreateVidZanyatiya();// 14 вариант - дисциплина
-                    Console.WriteLine(vidzanyatiya.Name);
+                    Printeri.Print(CreateVidZanyatiya());
                     break;
                 case "Oborudovanie":
                     // 15 вариант
@@ -111,30 +91,9 @@ class Program
 
     }
 
-    static void Print(Zaniatie zaniatie)
-    {
-        Console.WriteLine($"\nПолученные данные:\n{zaniatie.Ayditoria.Nazvanie}"); // 2 вариант - аудитория
-        Print(zaniatie.Ayditoria);
-        Print(zaniatie.Discyplina);
-        Print(zaniatie.VidZanyatiya);
-    }
-
-    static void Print(VidZanyatiya vidZanyatiya)
-    {
-        throw new NotImplementedException();
-    }
-
-    static void Print(Discyplina discyplina)
-    {
-        throw new NotImplementedException();
-    }
-
-    static void Print(Ayditoria ayditoria)
-    {
-        Console.WriteLine(ayditoria.Posadmesta);// 2 вариант - аудитория
-        Console.WriteLine(ayditoria.Kolvookon);// 2 вариант - аудитория
-    }
-
+    /// <summary>
+    /// 1 вариант - занятие
+    /// </summary>
     static Zaniatie CreateZaniatie()
     {
         return new Zaniatie(
@@ -142,6 +101,8 @@ class Program
             CreateDiscyplina(),
             CreateVidZanyatiya());
     }
+
+
 
     /// <summary>
     /// 2 вариант - аудитория
@@ -160,6 +121,7 @@ class Program
     }
 
 
+
     /// <summary>
     /// 3 вариант - дисциплина
     /// </summary>
@@ -173,6 +135,9 @@ class Program
         var a = new Discyplina(name, shortname);
         return a;
     }
+
+
+
     static Gryppa CreateGryppa() // 4
     {
         Console.Write("Введите название группы: ");
@@ -185,9 +150,11 @@ class Program
         var year = Console.ReadLine() ?? "Нет названия";
         // ссылка на специальность//
         //ссылка на сотрудника//
-        var a = new Gryppa(name, shortname, chislo, year);
+        var a = new Gryppa(name, shortname, chislo, year, CreateSpecialnost(), CreateSotrydnik());
         return a;
     }
+
+
 
     static Student CreateStudent() // 5
     {
@@ -198,15 +165,19 @@ class Program
         Console.Write("Введите отчество студента: ");
         var otchestvo = (Console.ReadLine() ?? "Нет названия");
         Console.Write("Введите дату рождения студента: ");
-        var data = Convert.ToDateTime(Console.ReadLine() ?? "Нет названия");
+        var data = Convert.ToDateTime(Console.ReadLine() ?? DateTime.Today.ToString());
         var a = new Student(name, familia, otchestvo, CreateGryppa(), data);
         return a;
     }
+
+
 
     static Specialnost CreateSpecialnost() // 6
     {
         throw new NotImplementedException();
     }
+
+
 
     static Para CreatePara() // 7
     {
@@ -261,8 +232,8 @@ class Program
         return name;
 
     }
-
-    static Gryppa CreateVidZanyatiyaGryppa() // 15
+    
+    static Oborudovanie CreateOborudovanie() // 15
     {
         throw new NotImplementedException();
     }

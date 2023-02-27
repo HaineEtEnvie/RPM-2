@@ -8,11 +8,11 @@ namespace ClassLibrary1
 {
     public class VidZanyatiya
     {
-        private readonly string name141;
-        public string Name { get => name141; }
-        public VidZanyatiya(string name141)
+        private readonly string name;
+        public string Name { get => name; }
+        public VidZanyatiya(string name)
         {
-            this.name141 = name141;
+            this.name = name;
         }
     }
 }
