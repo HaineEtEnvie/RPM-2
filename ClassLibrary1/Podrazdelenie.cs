@@ -8,5 +8,20 @@ namespace ClassLibrary1
 {
     public class Podrazdelenie
     {
+        private readonly string nazvanie;
+        public string Nazvanie { get => nazvanie; }
+
+        private readonly Sotrydnik sotrydnik;
+        public Sotrydnik Sotrydnik { get => sotrydnik; }
+
+        private readonly Organizacia organizacia;
+        public Organizacia Organizacia { get => organizacia; }
+
+        public Podrazdelenie(string nazvanie, Sotrydnik rycovoditel, Organizacia organizacia)
+        {
+            this.nazvanie = nazvanie;
+            this.sotrydnik = rycovoditel;
+            this.organizacia = organizacia;
+        }
     }
 }

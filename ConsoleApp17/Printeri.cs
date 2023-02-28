@@ -49,15 +49,15 @@ internal static class Printeri
     }
     public static void Print(Specialnost specialnost) // 6
     {
-        throw new NotImplementedException();
+        
     }
     public static void Print(Para para) // 7
     {
-        throw new NotImplementedException();
+        
     }
     public static void Print(Smena smena) // 8
     {
-        throw new NotImplementedException();
+        
     }
     public static void Print(Sotrydnik sotrydnik) // 9
     {
@@ -67,19 +67,19 @@ internal static class Printeri
     }
     public static void Print(Doljnost doljnost) // 10
     {
-        throw new NotImplementedException();
     }
     public static void Print(Podrazdelenie podrazdelenie) // 11
     {
-        throw new NotImplementedException();
+        Console.WriteLine(podrazdelenie.Nazvanie);
+        Print(podrazdelenie.Sotrydnik);
+        Print(podrazdelenie.Organizacia);
+        
     }
     public static void Print(Organizacia organizacia) // 12
     {
-        throw new NotImplementedException();
     }
     public static void Print(Korpus korpus) // 13
     {
-        throw new NotImplementedException();
     }
     public static void Print(VidZanyatiya vidZanyatiya) // 14
     {
@@ -87,39 +87,30 @@ internal static class Printeri
     }
     public static void Print(Oborudovanie oborudovanie) // 15
     {
-        throw new NotImplementedException();
     }
     public static void Print(KTP kTP) // 16
     {
-        throw new NotImplementedException();
     }
     public static void Print(Tema tema) // 17
     {
-        throw new NotImplementedException();
     }
     public static void Print(Paragraf paragraf) // 18
     {
-        throw new NotImplementedException();
     }
     public static void Print(Tema_VidZanyatiya tema_VidZanyatiya) // 19
     {
-        throw new NotImplementedException();
     }
     public static void Print(Material material) // 20
     {
-        throw new NotImplementedException();
     }
     public static void Print(Kompetenciya kompetenciya) // 21
     {
-        throw new NotImplementedException();
     }
     public static void Print(ShapkaKTP shapkaKTP) // 22
     {
-        throw new NotImplementedException();
     }
     public static void Print(Vneurochka vneurochka) // 23
     {
-        throw new NotImplementedException();
     }
 
 

@@ -43,7 +43,7 @@ class Program
                     // 10 вариант
                     break;
                 case "Podrazdelenie":
-                    // 11 вариант
+                    Printeri.Print(CreatePodrazdelenie());
                     break;
                 case "Organizacia":
                     // 12 вариант
@@ -173,19 +173,19 @@ class Program
 
     static Specialnost CreateSpecialnost() // 6
     {
-        throw new NotImplementedException();
+        return new Specialnost();
     }
 
 
     static Para CreatePara() // 7
     {
-        throw new NotImplementedException();
+        return new Para();
     }
 
 
     static Smena CreateSmena() // 8
     {
-        throw new NotImplementedException();
+        return new Smena();
     }
 
     static Sotrydnik CreateSotrydnik() // 9
@@ -202,22 +202,25 @@ class Program
 
     static Doljnost CreateDoljnost() // 10
     {
-        throw new NotImplementedException();
+        return new Doljnost();
     }
 
     static Podrazdelenie CreatePodrazdelenie() // 11
     {
-        throw new NotImplementedException();
+        Console.Write("Введите название: ");
+        var nazvanie = Console.ReadLine() ?? "Нет названия";
+        var a = new Podrazdelenie(nazvanie, CreateSotrydnik(), CreateOrganizacia());
+        return a;
     }
 
     static Organizacia CreateOrganizacia() // 12
     {
-        throw new NotImplementedException();
+        return new Organizacia();
     }
 
     static Korpus CreateKorpus() // 13
     {
-        throw new NotImplementedException();
+        return new Korpus();
     }
 
     /// <summary>
@@ -234,46 +237,46 @@ class Program
     
     static Oborudovanie CreateOborudovanie() // 15
     {
-        throw new NotImplementedException();
+        return new Oborudovanie();
     }
 
     static KTP CreateKTP() // 16
     {
-        throw new NotImplementedException();
+        return new KTP();
     }
 
     static Tema CreateTema() // 17
     {
-        throw new NotImplementedException();
+        return new Tema();
     }
 
     static Paragraf CreateParagraf() // 18
     {
-        throw new NotImplementedException();
+        return new Paragraf();
     }
 
     static Tema_VidZanyatiya CreateTema_VidZanyatiya() // 19
     {
-        throw new NotImplementedException();
+        return new Tema_VidZanyatiya();
     }
 
     static Material CreateMaterial() // 20
     {
-        throw new NotImplementedException();
+        return new Material();
     }
 
     static Kompetenciya CreateKompetenciya() // 21
     {
-        throw new NotImplementedException();
+        return new Kompetenciya();
     }
 
     static ShapkaKTP CreateShapkaKTP() // 22
     {
-        throw new NotImplementedException();
+        return new ShapkaKTP();
     }
 
     static Vneurochka CreateVneurochka() // 23
     {
-        throw new NotImplementedException();
+        return new Vneurochka();
     }
 }
