@@ -111,9 +111,8 @@ class Program
     /// </summary>
     static Ayditoria CreateAyditoria()
     {
-        Console.Write("Введите название аудитории: ");
+        Console.Write("Введите номер аудитории: ");
         var nazvanie = Console.ReadLine() ?? "Нет названия";
-        // ссылка на сотрудника
         Console.Write("Введите кол-во посадочных мест: ");
         var posadmesta = Console.ReadLine() ?? "Нет названия";
         Console.Write("Введите кол-во окон: ");
@@ -148,7 +147,7 @@ class Program
         Console.Write("Введите численность: ");
         var chislo = Console.ReadLine() ?? "Нет названия";
         Console.Write("Введите год поступления:");
-        var year = Console.ReadLine() ?? "Нет названия";
+        var year = Convert.ToInt32(Console.ReadLine() ?? "Нет названия");
         // ссылка на специальность//
         //ссылка на сотрудника//
         var a = new Gryppa(name, shortname, chislo, year, CreateSpecialnost(), CreateSotrydnik());

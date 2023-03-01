@@ -72,8 +72,7 @@ internal static class Printeri
     {
         Console.WriteLine(podrazdelenie.Nazvanie);
         Print(podrazdelenie.Sotrydnik);
-        Print(podrazdelenie.Organizacia);
-        
+        Print(podrazdelenie.Organizacia);  
     }
     public static void Print(Organizacia organizacia) // 12
     {
