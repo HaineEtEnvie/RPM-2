@@ -1,4 +1,5 @@
-﻿namespace ClassLibrary1
+﻿// https://docs.google.com/document/d/1KZXfKJussGflgWnWylGbFrwmdcn3liYKIsgmtxB1mN0/edit
+namespace ClassLibrary1
 {
     public class Zaniatie
     {
