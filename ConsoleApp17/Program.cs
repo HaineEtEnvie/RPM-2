@@ -105,7 +105,6 @@ class Program
     }
 
 
-
     /// <summary>
     /// 2 вариант - аудитория
     /// </summary>
@@ -122,12 +121,11 @@ class Program
     }
 
 
-
     /// <summary>
     /// 3 вариант - дисциплина
     /// </summary>
     /// <returns></returns>
-    static Discyplina CreateDiscyplina() // 3 вариант - дисциплина
+    static Discyplina CreateDiscyplina()
     {
         Console.Write("Введите полное навазние дисциплины: ");
         var name = (Console.ReadLine() ?? "Нет названия");
@@ -138,14 +136,18 @@ class Program
     }
 
 
-    static Gryppa CreateGryppa() // 4
+    /// <summary>
+    /// 4 вариант - группа 
+    /// </summary>
+    /// <returns></returns>
+    static Gryppa CreateGryppa() 
     {
         Console.Write("Введите название группы: ");
         var name = Console.ReadLine() ?? "Нет названия";
         Console.Write("Введите сокращение: ");
         var shortname = Console.ReadLine() ?? "Нет названия";
         Console.Write("Введите численность: ");
-        var chislo = Console.ReadLine() ?? "Нет названия";
+        var chislo = Convert.ToInt32(Console.ReadLine() ?? "Нет названия");
         Console.Write("Введите год поступления:");
         var year = Convert.ToInt32(Console.ReadLine() ?? "Нет названия");
         var a = new Gryppa(name, shortname, chislo, year, CreateSpecialnost(), CreateSotrydnik());
@@ -153,7 +155,11 @@ class Program
     }
 
 
-    static Student CreateStudent() // 5
+    /// <summary>
+    /// 5 вариант - студент
+    /// </summary>
+    /// <returns></returns>
+    static Student CreateStudent() 
     {
         Console.Write("Введите имя студента: ");
         var name = (Console.ReadLine() ?? "Нет названия");
@@ -168,24 +174,40 @@ class Program
     }
 
 
-    static Specialnost CreateSpecialnost() // 6
+    /// <summary>
+    /// 6 вариант - специальность
+    /// </summary>
+    /// <returns></returns>
+    static Specialnost CreateSpecialnost()
     {
         return new Specialnost();
     }
 
-
-    static Para CreatePara() // 7
+    /// <summary>
+    ///  7 вариант - пара
+    /// </summary>
+    /// <returns></returns>
+    static Para CreatePara() 
     {
         return new Para();
     }
 
 
-    static Smena CreateSmena() // 8
+    /// <summary>
+    /// 8 вариант - смена
+    /// </summary>
+    /// <returns></returns>
+    static Smena CreateSmena()
     {
         return new Smena();
     }
 
-    static Sotrydnik CreateSotrydnik() // 9
+
+    /// <summary>
+    /// 9 вариант - сотрудник
+    /// </summary>
+    /// <returns></returns>
+    static Sotrydnik CreateSotrydnik()
     {
         Console.Write("Введите фамилию: ");
         var surname = Console.ReadLine() ?? "Нет названия";
@@ -197,12 +219,22 @@ class Program
         return a;
     }
 
-    static Doljnost CreateDoljnost() // 10
+
+    /// <summary>
+    /// 10 вариант - должность
+    /// </summary>
+    /// <returns></returns>
+    static Doljnost CreateDoljnost() 
     {
         return new Doljnost();
     }
 
-    static Podrazdelenie CreatePodrazdelenie() // 11
+
+    /// <summary>
+    ///  11 вариант - подразделение
+    /// </summary>
+    /// <returns></returns>
+    static Podrazdelenie CreatePodrazdelenie() 
     {
         Console.Write("Введите название: ");
         var nazvanie = Console.ReadLine() ?? "Нет названия";
@@ -210,69 +242,125 @@ class Program
         return a;
     }
 
-    static Organizacia CreateOrganizacia() // 12
+
+    /// <summary>
+    /// 12 вариант - организация
+    /// </summary>
+    /// <returns></returns>
+    static Organizacia CreateOrganizacia() 
     {
         return new Organizacia();
     }
 
-    static Korpus CreateKorpus() // 13
+
+    /// <summary>
+    /// 13 вариант - корпус
+    /// </summary>
+    /// <returns></returns>
+    static Korpus CreateKorpus() 
     {
         return new Korpus();
     }
+
 
     /// <summary>
     /// 14 вариант - вид занятия
     /// </summary>
     /// <returns></returns>
-    static VidZanyatiya CreateVidZanyatiya() // 14 вариант - вид занятия
+    static VidZanyatiya CreateVidZanyatiya() 
     {
         Console.Write("Введите вид занятия: ");
         var name = new VidZanyatiya(Console.ReadLine() ?? "Нет названия");
         return name;
 
     }
-    
-    static Oborudovanie CreateOborudovanie() // 15
+
+
+    /// <summary>
+    /// 15 вариант - оборудование
+    /// </summary>
+    /// <returns></returns>
+    static Oborudovanie CreateOborudovanie()
     {
         return new Oborudovanie();
     }
 
-    static KTP CreateKTP() // 16
+
+    /// <summary>
+    /// 16 вариант - КТП
+    /// </summary>
+    /// <returns></returns>
+    static KTP CreateKTP()
     {
         return new KTP();
     }
 
-    static Tema CreateTema() // 17
+
+    /// <summary>
+    /// 17 вариант - тема
+    /// </summary>
+    /// <returns></returns>
+    static Tema CreateTema() 
     {
         return new Tema();
     }
 
-    static Paragraf CreateParagraf() // 18
+
+    /// <summary>
+    /// 18 вариант - параграф
+    /// </summary>
+    /// <returns></returns>
+    static Paragraf CreateParagraf() 
     {
         return new Paragraf();
     }
 
-    static Tema_VidZanyatiya CreateTema_VidZanyatiya() // 19
+
+    /// <summary>
+    /// 19 вариант - Тема-ВидЗанятия
+    /// </summary>
+    /// <returns></returns>
+    static Tema_VidZanyatiya CreateTema_VidZanyatiya()
     {
         return new Tema_VidZanyatiya();
     }
 
-    static Material CreateMaterial() // 20
+
+    /// <summary>
+    /// 20 вариант - материал
+    /// </summary>
+    /// <returns></returns>
+    static Material CreateMaterial() 
     {
         return new Material();
     }
 
-    static Kompetenciya CreateKompetenciya() // 21
+
+    /// <summary>
+    /// 21 вариант - компетенция
+    /// </summary>
+    /// <returns></returns>
+    static Kompetenciya CreateKompetenciya() 
     {
         return new Kompetenciya();
     }
 
-    static ShapkaKTP CreateShapkaKTP() // 22
+
+    /// <summary>
+    /// 22 вариант - шапка КТП
+    /// </summary>
+    /// <returns></returns>
+    static ShapkaKTP CreateShapkaKTP()
     {
         return new ShapkaKTP();
     }
 
-    static Vneurochka CreateVneurochka() // 23
+
+    /// <summary>
+    /// 23 вариант - внеурочка
+    /// </summary>
+    /// <returns></returns>
+    static Vneurochka CreateVneurochka() 
     {
         return new Vneurochka();
     }

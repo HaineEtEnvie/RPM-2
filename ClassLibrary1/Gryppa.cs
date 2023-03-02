@@ -16,8 +16,8 @@ namespace ClassLibrary1
         private readonly string shortname;
         public string Shortname { get => shortname; }
 
-        private readonly string chislo;
-        public string Chislo { get => chislo; }
+        private readonly int chislo;
+        public int Chislo { get => chislo; }
 
         private readonly int year;
         public int Year { get => year; }
@@ -28,7 +28,7 @@ namespace ClassLibrary1
         private readonly Sotrydnik sotrydnik;
         public Sotrydnik Sotrydnik { get => sotrydnik; }
 
-        public Gryppa(string name, string shortname, string chislo, int year, Specialnost specialnost, Sotrydnik sotrydnik)
+        public Gryppa(string name, string shortname, int chislo, int year, Specialnost specialnost, Sotrydnik sotrydnik)
         {
             this.name = name;
             this.shortname = shortname;
