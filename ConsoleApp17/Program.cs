@@ -148,8 +148,6 @@ class Program
         var chislo = Console.ReadLine() ?? "Нет названия";
         Console.Write("Введите год поступления:");
         var year = Convert.ToInt32(Console.ReadLine() ?? "Нет названия");
-        // ссылка на специальность//
-        //ссылка на сотрудника//
         var a = new Gryppa(name, shortname, chislo, year, CreateSpecialnost(), CreateSotrydnik());
         return a;
     }
