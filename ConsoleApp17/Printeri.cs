@@ -79,6 +79,10 @@ internal static class Printeri
     }
     public static void Print(Korpus korpus) // 13
     {
+        Console.WriteLine(korpus.Name);
+        Console.WriteLine(korpus.Adress);
+        Print(korpus.Sotrydnik);
+        Print(korpus.Organizacia);
     }
     public static void Print(VidZanyatiya vidZanyatiya) // 14
     {

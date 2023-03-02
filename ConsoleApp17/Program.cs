@@ -49,7 +49,7 @@ class Program
                     // 12 вариант
                     break;
                 case "Korpus":
-                    // 13 вариант
+                    Printeri.Print(CreateKorpus());
                     break;
                 case "VidZanyatiya":
                     Printeri.Print(CreateVidZanyatiya());
@@ -257,9 +257,16 @@ class Program
     /// 13 вариант - корпус
     /// </summary>
     /// <returns></returns>
-    static Korpus CreateKorpus() 
+    static Korpus CreateKorpus() // 13
     {
-        return new Korpus();
+        Console.Write("Введите имя: ");
+        string name = Console.ReadLine() ?? "Не заполнено";
+        Console.WriteLine("Введите адресс: ");
+        string adress = Console.ReadLine() ?? "Не заполнено";
+        Console.WriteLine("Введите дату: ");
+        var data = Convert.ToDateTime(Console.ReadLine() ?? DateTime.Today.ToString());
+        var a = new Korpus(name, adress, CreateSotrydnik(), CreateOrganizacia(), data);
+        return a;
     }
 
 
