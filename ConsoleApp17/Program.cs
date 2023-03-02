@@ -28,7 +28,7 @@ class Program
                     Printeri.Print(CreateStudent());
                     break;
                 case "Specialnost":
-                    // 6 вариант
+                    Printeri.Print(CreateSpecialnost());
                     break;
                 case "Para":
                     // 7 вариант
@@ -180,7 +180,12 @@ class Program
     /// <returns></returns>
     static Specialnost CreateSpecialnost()
     {
-        return new Specialnost();
+        Console.WriteLine("Введите название специальности: ");
+        var Name = (Console.ReadLine() ?? "Нет названия");
+        Console.WriteLine("Введите сокращение специальности: ");
+        var reduction = (Console.ReadLine() ?? "Нет сокращения");
+        var a = new Specialnost(Name, reduction);
+        return a;
     }
 
     /// <summary>

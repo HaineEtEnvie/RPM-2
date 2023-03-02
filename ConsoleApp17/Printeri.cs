@@ -49,7 +49,8 @@ internal static class Printeri
     }
     public static void Print(Specialnost specialnost) // 6
     {
-        
+        Console.WriteLine(specialnost.Name);
+        Console.WriteLine(specialnost.Reduction);
     }
     public static void Print(Para para) // 7
     {
