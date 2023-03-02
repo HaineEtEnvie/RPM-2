@@ -263,9 +263,8 @@ class Program
         string name = Console.ReadLine() ?? "Не заполнено";
         Console.WriteLine("Введите адресс: ");
         string adress = Console.ReadLine() ?? "Не заполнено";
-        Console.WriteLine("Введите дату: ");
-        var data = Convert.ToDateTime(Console.ReadLine() ?? DateTime.Today.ToString());
-        var a = new Korpus(name, adress, CreateSotrydnik(), CreateOrganizacia(), data);
+        Console.WriteLine("Введите дату: ")
+        var a = new Korpus(name, adress, CreateSotrydnik(), CreateOrganizacia());
         return a;
     }
 
