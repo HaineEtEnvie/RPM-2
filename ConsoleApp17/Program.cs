@@ -149,7 +149,7 @@ class Program
         Console.Write("Введите численность: ");
         var chislo = Convert.ToInt32(Console.ReadLine() ?? "Нет названия");
         Console.Write("Введите год поступления:");
-        var year = Convert.ToInt32(Console.ReadLine() ?? "Нет названия");
+        var year = Convert.ToInt16(Console.ReadLine() ?? "Нет названия");
         var a = new Gryppa(name, shortname, chislo, year, CreateSpecialnost(), CreateSotrydnik());
         return a;
     }
@@ -263,7 +263,7 @@ class Program
         string name = Console.ReadLine() ?? "Не заполнено";
         Console.WriteLine("Введите адресс: ");
         string adress = Console.ReadLine() ?? "Не заполнено";
-        Console.WriteLine("Введите дату: ")
+        Console.WriteLine("Введите дату: ");
         var a = new Korpus(name, adress, CreateSotrydnik(), CreateOrganizacia());
         return a;
     }
